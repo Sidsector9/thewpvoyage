@@ -1,0 +1,306 @@
+
+.body--light {
+	@include site-title {
+		font-family: $font-header;
+
+		font-size: 2rem;
+
+		@include desktop {
+			font-size: 2.75rem;
+
+			svg {
+				max-width: 35px;
+				position: relative;
+				top: 8px;
+				fill: #ffa331;
+				left: -5px;
+			}
+		}
+
+		a {
+			color: #484a47;
+			text-decoration: none;
+		}
+	}
+
+	@include body {
+		color: #484A47;
+		background-color: #fff;
+	}
+
+	@include entry-header {
+		position: relative;
+
+		@include desktop {
+			// margin-left: calc(-50vw + 360px);
+			// margin-right: calc(-50vw + 360px);
+			// padding-left: calc( -1 * ( -50vw + 360px));
+			// padding-right: calc( -1 * ( -50vw + 360px));
+		}
+	}
+
+	@include entry-title {
+		color: #FB4570;
+	}
+
+	@include entry-meta {
+		a {
+			color: #e08a1f;
+
+			&:hover,
+			&:visited,
+			&:active,
+			&:focus {
+				color: #e08a1f;
+			}
+		}
+	}
+
+	@include content {
+		position: relative;
+		margin-top: 8rem;
+		margin-bottom: 8rem;
+
+		&:before,
+		&:after {
+			content: '\2026';
+			position: absolute;
+			left: 50%;
+			transform: translate( -50%, -50% );
+			font-size: 2.5rem;
+			line-height: 0;
+		}
+
+		&:before {
+			top: -4.5rem;
+		}
+		
+		&:after {
+			bottom: -4rem;
+		}
+	}
+
+	@include content-links {
+		border-bottom: 2px solid;
+
+		&:focus {
+			background-color: #484a4724;
+		}
+	}
+
+	@include content-inline-code {
+		background-color: #fb457021;
+		white-space: nowrap;
+		font-family: $font-code;
+
+		&:before,
+		&:after {
+			color: #FB4570;
+			width: 15px;
+			display: inline-block;
+		}
+
+		&:before {
+			content: '{ ';
+			text-align: right;;
+		}
+
+		&:after {
+			content: ' }';
+		}
+	}
+
+	@include content-block-code {
+		font-family: $font-code;
+		font-display: swap;
+		font-size: 1.05rem;
+
+		@include desktop {
+			border-radius: 8px;
+		}
+
+		.shcb-loc::before {
+			border-color: #dddddd21;
+		}
+	}
+
+	@include content-video {
+		border: 1px solid #d2d2d2;
+		padding: 2px;
+		border-radius: 8px;
+	}
+
+	@include entry-footer {
+		padding-top: 2rem;
+	}
+
+	@include entry-footer-links {
+		color: #484A47;
+		font-family: 'Andika New Basic', sans-serif;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline !important;
+		}
+
+		&:focus {
+			background-color: #484a4724;
+		}
+	}
+
+	@include entry-footer-tax {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+	}
+
+	@include entry-footer-svg {
+		width: 100%;
+		max-width: 32px;
+		height: auto;
+		fill: #FB4570;
+	}
+
+	@include entry-footer-tax-items {
+		padding-left: 0.5rem;
+	}
+
+	@include nav-icon {
+		align-self: center;
+
+		svg {
+			fill: #FB4570;
+			width: 64px;
+		}
+
+		&.nav-icon--previous svg {
+			transform: rotate( 290deg );
+		}
+
+		&.nav-icon--next svg {
+			transform: scaleX( -1 ) rotate( 290deg );
+		}
+	}
+
+	@include nav-links {
+		display: flex;
+		font-family: 'Andika New Basic', sans-serif;
+		color: #484A47;
+		width: 100%;
+
+		&:focus {
+			background-color: #484a4724;
+		}
+	}
+
+	@include nav-buttons {
+		display: flex;
+	}
+
+	@include nav-wrapper {
+		padding: 3.5rem 0;
+		margin: 4rem 0;
+		border-top: 2px solid;
+		border-bottom: 2px solid;
+	}
+
+	@include nav-title {
+		flex-grow: 1;
+	}
+
+	/**
+	 * Front page.
+	 */
+
+	@include list-item {
+		font-family: 'Andika New Basic', sans-serif;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		border-top: 1px solid #d5d5d5;
+		padding: 1rem 0;
+
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+
+		@include desktop {
+			flex-flow: row nowrap;
+		}
+	}
+
+	@include list-title {
+		font-size: 1.5rem;
+		font-family: $font-header;
+		color: #FB4570;
+		max-width: 100%;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		@include desktop {
+			font-size: 2rem;
+			font-weight: 400;
+			max-width: 550px;
+		}
+	}
+
+	@include list-item-post-date {
+		font-size: 1.15rem;
+		opacity: 0.6;
+	}
+
+	@include post-navigation {
+		display: flex;
+		flex-flow: row wrap;
+
+		& > * {
+			width: 100%;
+			min-height: 100px;
+
+			&:nth-child(1) {
+				margin-bottom: 2rem;
+			}
+
+			@include desktop {
+				width: 50%;
+				min-height: auto;
+
+				&:nth-child(1) {
+					padding-right: 1rem;
+					margin-bottom: auto;
+				}
+
+				&:nth-child(2) {
+					padding-left: 1rem;
+				}
+			}
+		}
+
+		.nav-title {
+			align-self: center;
+		}
+	}
+
+	&.archive {
+		@include archive-icon {
+			max-width: 96px;
+			margin: 0 auto;
+			margin-bottom: 2rem;
+	
+			svg {
+				width: 100%;
+				height: auto;
+				fill: #FB4570;
+			}
+		}
+	
+		@include archive-title {
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+.body--light {
+	.site-branding a {
+		color: #17171e;
+	}
+
+	.list-title a {
+		color: var(--title-color);
+	}
+
+	.list-item-count {
+		color: #503c75;
+	}
+
+	.list-item-post-date {
+		color: #000000ad;
+	}
+
+	.entry-title {
+		color: var(--title-color);
+	}
+
+	.posted-on a {
+		color: var(--count-color);
+		font-weight: 600;
+	}
+
+	.post-navigation {
+		background-color: #FFD9DA;
+
+		a {
+			color: var(--title-color);
+		}
+	}
+
+	.nav-type {
+		color: #000;
+	}
+
+	.entry-content {
+		.wp-block-video {
+			video {
+				border-color: #503c754f;
+			}
+		}
+
+		.wp-block-image {
+			img {
+				border-color: #503c754f;
+			}
+		}
+
+		figcaption {
+			color: #757575;
+		}
+
+		code:not( .hljs ) {
+			background-color: #FFEFD3;
+			border-color:#FFCB7B;
+			color: #805c25;
+		}
+	}
+
+	.site-footer {
+		a {
+			color: #0073aa;
+		}
+	}
+}

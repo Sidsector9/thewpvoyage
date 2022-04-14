@@ -1,0 +1,188 @@
+@mixin font-h1 {
+	font-family: $font-header, serif;
+	font-display: swap;
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-size: clamp(2.5929rem, calc(1.17rem + 4.743vw), 3.5rem);
+	line-height: 1.35;
+}
+
+@mixin font-h2 {
+	font-family: $font-header, serif;
+	font-display: swap;
+	font-size: clamp(1.9209rem, calc(0.8668rem + 3.5137vw), 2.5929rem);
+	line-height: 1;
+}
+
+@mixin font-body {
+	font-family: 'Georgia', serif;
+	font-display: swap;
+	font-size: 1.1739rem;
+	line-height: 1.995rem;
+	
+	@include desktop {
+		font-size: 1.35rem;
+		line-height: 2.295rem;
+	}
+}
+
+@mixin body {
+	@content;
+}
+
+@mixin site-title {
+	.site-branding {
+		@content;
+	}
+}
+
+@mixin entry-title {
+	.site-main .entry-title {
+		@content;
+	}
+}
+
+@mixin entry-meta {
+	.site-main .entry-meta {
+		@content;
+	}
+}
+
+@mixin content {
+	.entry-content {
+		@content;
+	}
+}
+
+@mixin content-links {
+	.entry-content a {
+		@content;
+	}
+}
+
+@mixin content-inline-code {
+	.entry-content > p > code {
+		@content;
+	}
+}
+
+@mixin content-block-code {
+	.wp-block-code code {
+		@content;
+	}
+}
+
+@mixin content-video {
+	video {
+		@content;
+	}
+}
+
+@mixin entry-header {
+	.entry-header {
+		@content;
+	}
+}
+
+@mixin entry-footer {
+	.entry-footer {
+		@content;
+	}
+}
+
+@mixin entry-footer-links {
+	.entry-footer a {
+		@content;
+	}
+}
+
+@mixin entry-footer-tax {
+	.entry-footer__tax {
+		@content;
+	}
+}
+
+@mixin entry-footer-tax-items {
+	.entry-footer__tax-items {
+		@content;
+	}
+}
+
+@mixin entry-footer-svg {
+	.entry-footer__tax svg {
+		@content;
+	}
+}
+
+@mixin nav-wrapper {
+	.nav-links {
+		@content;
+	}
+}
+
+@mixin nav-icon {
+	.nav-icon {
+		@content;
+	}
+}
+
+@mixin nav-buttons {
+	& .nav-previous,
+	& .nav-next {
+		@content;
+	}
+}
+
+@mixin post-navigation {
+	.nav-links {
+		@content;
+	}
+}
+
+@mixin nav-links {
+	.nav-links a {
+		@content;
+	}
+}
+
+@mixin nav-title {
+	.nav-title {
+		@content;
+	}
+}
+
+@mixin list-item {
+	.list-item {
+		@content;
+	}
+}
+
+@mixin list-title {
+	.list-title {
+		@content;
+	}
+}
+
+@mixin list-item-post-date {
+	.list-item-post-date {
+		@content;
+	}
+}
+
+@mixin archive-icon {
+	.archive-icon {
+		@content;
+	}
+}
+
+@mixin archive-title {
+	.archive-title {
+		@content;
+	}
+}
+
+@mixin site-footer {
+	.site-footer {
+		@content;
+	}
+}

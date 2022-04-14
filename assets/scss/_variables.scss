@@ -1,0 +1,33 @@
+:root {
+	--body-font: Georgia, serif;
+	--title-font: 'Barlow', sans-serif;
+	--code-font: 'Fira Code', monospace;
+
+	--title-color: #cb046c;
+	--count-color: #503c75;
+}
+
+$default-background-colors: (
+	'notice-blue': #C4EAF8,
+	'goal-orange': #F8D8C4,
+);
+
+$text-color: '';
+
+@each $slug, $color in $default-background-colors {
+	.has-#{$slug}-background-color {
+		background-color: $color;
+
+		@if ( $slug == 'notice-blue' ) {
+			$text-color: #006a85;
+		} @else if ( $slug == 'goal-orange' ) {
+			$text-color: #853300;
+		}
+
+		color: $text-color;
+
+		&:before {
+			background-color: $text-color;
+		}
+	}
+};

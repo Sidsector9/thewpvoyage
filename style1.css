@@ -1,0 +1,1122 @@
+/*!
+Theme Name: WP Propellers
+Theme URI: http://underscores.me/
+Author: Siddharth
+Author URI: https://github.com/sidsector9
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-propellers
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+WP Propellers is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+/* Normalize
+--------------------------------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Box sizing
+--------------------------------------------- */
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+	background: #fff;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color: #4169e1;
+}
+
+a:visited {
+	color: #800080;
+}
+
+a:hover, a:focus, a:active {
+	color: #191970;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/* Navigation
+--------------------------------------------- */
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+/* Accessibility
+--------------------------------------------- */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+	/*rtl:ignore*/
+	float: left;
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+/* Bulma Utilities */
+@font-face {
+	font-family: "IM Fell DW Pica", serif;
+	font-display: swap;
+	src: url("assets/font/Notulen-Serif-Display-Extra-Bold.ttf");
+}
+
+body {
+	font-family: 'Georgia', serif;
+	font-display: swap;
+	font-size: 1.1739rem;
+	line-height: 1.995rem;
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		font-size: 1.35rem;
+		line-height: 2.295rem;
+	}
+}
+
+body strong {
+	font-weight: bold;
+}
+
+body h1 {
+	font-family: "IM Fell DW Pica", serif, serif;
+	font-display: swap;
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-size: clamp(2.5929rem, calc(1.17rem + 4.743vw), 3.5rem);
+	line-height: 1.35;
+}
+
+body.single h2 {
+	font-family: "IM Fell DW Pica", serif, serif;
+	font-display: swap;
+	font-size: clamp(1.9209rem, calc(0.8668rem + 3.5137vw), 2.5929rem);
+	line-height: 1;
+}
+
+body pre {
+	max-width: none;
+}
+
+body .live-brackground {
+	position: absolute;
+	bottom: -450px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+body .live-brackground .color-1 {
+	stop-color: blue !important;
+}
+
+body .live-brackground .color-2 {
+	stop-color: green !important;
+}
+
+body .live-brackground .color-3 {
+	stop-color: magenta !important;
+}
+
+body .live-brackground .color-4 {
+	stop-color: orange !important;
+}
+
+@media screen and (min-width: 1024px) {
+	body.single .entry-title {
+		text-align: center;
+	}
+}
+
+body .entry-meta {
+	font-family: "Andika New Basic", sans-serif, sans-serif;
+	margin: 1.5rem 0 5rem 0;
+	text-align: center;
+}
+
+body .entry-meta a {
+	text-decoration: none;
+}
+
+body article .entry-content > * + * {
+	margin-top: 2rem;
+}
+
+body article .entry-content > h2 {
+	margin-top: 5rem;
+}
+
+body article .entry-content > h2 + * {
+	margin-top: 1.16rem;
+}
+
+body article .entry-content a {
+	text-decoration: none;
+	color: inherit !important;
+}
+
+body article .entry-content figure figcaption {
+	font-family: "Andika New Basic", sans-serif;
+	font-size: 0.85rem;
+	text-align: center;
+}
+
+body article .entry-content p.has-background {
+	padding: 1rem 1.25rem;
+	font-family: "Andika New Basic", sans-serif;
+}
+
+body article .entry-content ul {
+	margin-left: 1rem;
+}
+
+.site-header {
+	padding: 7rem 0;
+	text-align: center;
+}
+
+.site-main {
+	width: 100%;
+	padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 769px), print {
+	.site-main {
+		max-width: 768px;
+		margin: 0 auto;
+	}
+}
+
+.alignwide {
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.alignwide {
+		margin-left: -6rem;
+		margin-right: -6rem;
+	}
+}
+
+.body--light {
+	color: #484A47;
+	background-color: #fff;
+	/**
+	 * Front page.
+	 */
+}
+
+.body--light .site-branding {
+	font-family: "IM Fell DW Pica", serif;
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.body--light .site-branding {
+		font-size: 2.75rem;
+	}
+	.body--light .site-branding svg {
+		max-width: 35px;
+		position: relative;
+		top: 8px;
+		fill: #ffa331;
+		left: -5px;
+	}
+}
+
+.body--light .site-branding a {
+	color: #484a47;
+	text-decoration: none;
+}
+
+.body--light .entry-header {
+	position: relative;
+}
+
+.body--light .site-main .entry-title {
+	color: #FB4570;
+}
+
+.body--light .site-main .entry-meta a {
+	color: #e08a1f;
+}
+
+.body--light .site-main .entry-meta a:hover, .body--light .site-main .entry-meta a:visited, .body--light .site-main .entry-meta a:active, .body--light .site-main .entry-meta a:focus {
+	color: #e08a1f;
+}
+
+.body--light .entry-content {
+	position: relative;
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+}
+
+.body--light .entry-content:before, .body--light .entry-content:after {
+	content: '\2026';
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2.5rem;
+	line-height: 0;
+}
+
+.body--light .entry-content:before {
+	top: -4.5rem;
+}
+
+.body--light .entry-content:after {
+	bottom: -4rem;
+}
+
+.body--light .entry-content a {
+	border-bottom: 2px solid;
+}
+
+.body--light .entry-content a:focus {
+	background-color: #484a4724;
+}
+
+.body--light .entry-content > p > code {
+	background-color: #fb457021;
+	white-space: nowrap;
+	font-family: "Fira Code", monospace;
+}
+
+.body--light .entry-content > p > code:before, .body--light .entry-content > p > code:after {
+	color: #FB4570;
+	width: 15px;
+	display: inline-block;
+}
+
+.body--light .entry-content > p > code:before {
+	content: '{ ';
+	text-align: right;
+}
+
+.body--light .entry-content > p > code:after {
+	content: ' }';
+}
+
+.body--light .wp-block-code code {
+	font-family: "Fira Code", monospace;
+	font-display: swap;
+	font-size: 1.05rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.body--light .wp-block-code code {
+		border-radius: 8px;
+	}
+}
+
+.body--light .wp-block-code code .shcb-loc::before {
+	border-color: #dddddd21;
+}
+
+.body--light video {
+	border: 1px solid #d2d2d2;
+	padding: 2px;
+	border-radius: 8px;
+}
+
+.body--light .entry-footer {
+	padding-top: 2rem;
+}
+
+.body--light .entry-footer a {
+	color: #484A47;
+	font-family: 'Andika New Basic', sans-serif;
+	text-decoration: none;
+}
+
+.body--light .entry-footer a:hover {
+	text-decoration: underline !important;
+}
+
+.body--light .entry-footer a:focus {
+	background-color: #484a4724;
+}
+
+.body--light .entry-footer__tax {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 1rem;
+}
+
+.body--light .entry-footer__tax svg {
+	width: 100%;
+	max-width: 32px;
+	height: auto;
+	fill: #FB4570;
+}
+
+.body--light .entry-footer__tax-items {
+	padding-left: 0.5rem;
+}
+
+.body--light .nav-icon {
+	align-self: center;
+}
+
+.body--light .nav-icon svg {
+	fill: #FB4570;
+	width: 64px;
+}
+
+.body--light .nav-icon.nav-icon--previous svg {
+	transform: rotate(290deg);
+}
+
+.body--light .nav-icon.nav-icon--next svg {
+	transform: scaleX(-1) rotate(290deg);
+}
+
+.body--light .nav-links a {
+	display: flex;
+	font-family: 'Andika New Basic', sans-serif;
+	color: #484A47;
+	width: 100%;
+}
+
+.body--light .nav-links a:focus {
+	background-color: #484a4724;
+}
+
+.body--light .nav-previous,
+.body--light .nav-next {
+	display: flex;
+}
+
+.body--light .nav-links {
+	padding: 3.5rem 0;
+	margin: 4rem 0;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.body--light .nav-title {
+	flex-grow: 1;
+}
+
+.body--light .list-item {
+	font-family: 'Andika New Basic', sans-serif;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-top: 1px solid #d5d5d5;
+	padding: 1rem 0;
+}
+
+.body--light .list-item:first-child {
+	border: 0;
+	padding-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+	.body--light .list-item {
+		flex-flow: row nowrap;
+	}
+}
+
+.body--light .list-title {
+	font-size: 1.5rem;
+	font-family: "IM Fell DW Pica", serif;
+	color: #FB4570;
+	max-width: 100%;
+}
+
+.body--light .list-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+@media screen and (min-width: 1024px) {
+	.body--light .list-title {
+		font-size: 2rem;
+		font-weight: 400;
+		max-width: 550px;
+	}
+}
+
+.body--light .list-item-post-date {
+	font-size: 1.15rem;
+	opacity: 0.6;
+}
+
+.body--light .nav-links {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.body--light .nav-links > * {
+	width: 100%;
+	min-height: 100px;
+}
+
+.body--light .nav-links > *:nth-child(1) {
+	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.body--light .nav-links > * {
+		width: 50%;
+		min-height: auto;
+	}
+	.body--light .nav-links > *:nth-child(1) {
+		padding-right: 1rem;
+		margin-bottom: auto;
+	}
+	.body--light .nav-links > *:nth-child(2) {
+		padding-left: 1rem;
+	}
+}
+
+.body--light .nav-links .nav-title {
+	align-self: center;
+}
+
+.body--light.archive .archive-icon {
+	max-width: 96px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+.body--light.archive .archive-icon svg {
+	width: 100%;
+	height: auto;
+	fill: #FB4570;
+}
+
+.body--light.archive .archive-title {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.site-footer {
+	margin-top: 5rem;
+	padding: 2rem 0;
+	text-align: center;
+	font-family: 'Andika New Basic';
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	letter-spacing: 2px;
+	word-spacing: 4px;
+}
+
+.site-footer a {
+	color: #0073aa;
+	font-family: Georgia;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

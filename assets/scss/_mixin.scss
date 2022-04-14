@@ -1,0 +1,4 @@
+@mixin font-size-and-line-height-calc( $font-size, $line-height-percent ) {
+	font-size: #{$font-size}rem;
+	line-height: calc( #{$font-size}rem + ( #{$line-height-percent} / 100 ) * #{$font-size}rem );
+}

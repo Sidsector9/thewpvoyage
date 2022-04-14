@@ -1,0 +1,133 @@
+@import "./node_modules/bulma/sass/utilities/_all.sass";
+@import './variables';
+@import './mixin';
+
+.wp-block-post-title {
+	font-family: var(--title-font);
+	margin: 0 auto;
+	margin-bottom: 7rem;
+	color: var(--title-color);
+
+	@include font-size-and-line-height-calc( 2.5, 42 );
+
+	@include desktop {
+		@include font-size-and-line-height-calc( 3, 40 );
+		text-align: center;
+	}
+}
+
+.is-root-container {
+	font-size: 1.15rem;
+	line-height: 1.9575rem;
+	font-family: var(--body-font);
+	max-width: 768px;
+	margin: 0 auto;
+
+	h2 {
+		margin-top: 4rem;
+		font-family: var(--title-font);
+		@include font-size-and-line-height-calc( 2, 30 );
+
+		@include desktop {
+			margin-top: 7rem;
+			margin-bottom: 2rem;
+			@include font-size-and-line-height-calc( 2.5, 32 );
+		}
+	}
+
+	a {
+		color: currentColor;
+		text-decoration: none;
+		border-bottom: 2px solid currentColor;
+	}
+
+	ul, ol {
+		padding-left: 1.5rem;
+
+		@include desktop {
+			padding-left: 2.5rem;
+			margin: 2.5rem 0;
+		}
+
+		li {
+			margin-bottom: 0.75rem;
+		}
+	}
+
+	.has-background {
+		position: relative;
+		border-radius: 8px;
+		margin-bottom: 2rem 0;
+		font-family: var(--code-font);
+		letter-spacing: -0.5px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+	}
+
+	code {
+		font-family: var(--code-font);
+		@include font-size-and-line-height-calc( 1, 60 );
+	}
+
+	code:not( .hljs ) {
+		display: inline-flex;
+		line-height: 1.25;
+		padding: 0.15rem 0.25rem;
+		border-left: 4px solid;
+		background-color: #FFEFD3;
+		border-color:#FFCB7B;
+		color: #805c25;
+	}
+
+	.wp-block[data-align="wide"] {
+		& > * {
+			margin-left: -6rem;
+			margin-right: -6rem;
+			max-width: initial;
+		}
+	}
+
+	.wp-block-code {
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+		overflow-y: hidden;
+		background-color: #e5e5e5;
+
+		@include desktop {
+			border-radius: 8px;
+		}
+	}
+
+	.wp-block-video {
+		video {
+			width: 100%;
+			border: 1px solid;
+			border-radius: 5px;
+			padding: 0.25rem;
+		}
+	}
+
+	.wp-block-image {
+		img {
+			border: 1px solid;
+			padding: 0.25rem;
+			border-radius: 5px;
+		}
+	}
+
+	figcaption {
+		font-size: 0.85rem;
+		text-align: center;
+		font-family: var(--code-font);
+		margin-top: 1.5rem;
+		color: #757575;
+	}
+}

@@ -1,0 +1,17 @@
+@include site-footer {
+	margin-top: 5rem;
+	padding: 2rem 0;
+	text-align: center;
+	font-family: 'Andika New Basic';
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	letter-spacing: 2px;
+	word-spacing: 4px;
+
+	a {
+		color: #0073aa;
+		font-family: Georgia;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+}
