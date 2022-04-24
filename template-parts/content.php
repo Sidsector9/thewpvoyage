@@ -74,6 +74,3 @@
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<div class="end-of-article">
-	<?php echo get_icon_svg( 'vintage-separator' ); ?>
-</div>

@@ -205,6 +205,13 @@ function get_icon_svg( $entity = '' ) {
 
 		case 'vintage-separator':
 			return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" enable-background="new 0 0 480 45" xml:space="preserve" viewBox="1.86 2.43 476.34 41.09"> <path fill="#98c379" d="M256.732,20.257c-25.941-5.898-54.665,6.027-76.378,12.625c-19.853,6.032-49.011,11.735-71.02,10.452  c-19.545-1.14-39.235-17.196-23.684-28.963c11.901-9.006,43.746,0.537,33.018,16.963c-3.667-11-9.667-13-18.333-12.667  C90.144,19.058,84.146,24.764,93,31.334c14.107,10.467,53.441,4.595,66.333,0C188.281,21.016,225.754,12.539,256.732,20.257"></path> <path fill="#e6c07b" d="M216.555,28.172c25.941,5.898,54.665-6.026,76.379-12.624c19.853-6.032,49.011-11.735,71.02-10.452  c19.545,1.14,39.234,17.196,23.684,28.963c-11.9,9.007-43.745-0.536-33.018-16.963c3.668,11,9.668,13,18.334,12.668  c10.19-0.393,16.188-6.098,7.334-12.668c-14.107-10.467-53.441-4.595-66.334,0C285.006,27.414,247.533,35.891,216.555,28.172"></path> <path fill="#61aeee" d="M94.25,7.5c-5.571,1.471-24.27,9.057-29.639,12.625c-5.123,3.404-9.64,6.162-15.361,9.375  c-11.456,6.436-31.479,11.94-41.736,1.639c-9.52-9.562-6.75-24.553,6.349-28.114C25.301-0.085,44.513,9.248,32,24.25  c1-7-1.75-11.875-8.25-15.25C18.778,6.418,10,9,8.25,14.25c-2.026,6.079,5.225,13.891,10.65,15.539  c6.587,2.002,12.363,2.127,17.961-0.012C48.057,25.5,54.757,19.959,63.25,16c4.206-1.96,13.25-6.25,20.25-7.75  C89.75,6.25,93.857,7.616,94.25,7.5"></path> <path fill="#F92672" d="M385.815,7.5c5.571,1.471,24.27,9.057,29.639,12.625c5.123,3.404,9.641,6.162,15.361,9.375  c11.456,6.436,31.479,11.94,41.736,1.639c9.52-9.562,6.75-24.553-6.35-28.113c-11.438-3.11-30.649,6.223-18.137,21.225  c-1-7,1.75-11.875,8.25-15.25c4.972-2.582,13.75,0,15.5,5.25c2.026,6.079-5.225,13.891-10.65,15.539  c-6.588,2.002-12.363,2.127-17.961-0.012C432.009,25.5,425.308,19.959,416.815,16c-4.205-1.961-13.25-6.25-20.25-7.75  C390.315,6.25,386.208,7.615,385.815,7.5"></path> </svg>';
+
+		case 'envelope':
+			return '<svg height=46 style=max-width:100% viewBox="0 0 46 46"width=46 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><path d="M23,36 C22.813,36 22.627,35.948 22.463,35.844 L0.463,21.844 C0.159,21.651 -0.017,21.308 0.001,20.948 C0.02,20.589 0.23,20.266 0.553,20.105 L23,6 L45.447,20.105 C45.769,20.266 45.98,20.588 45.999,20.948 C46.018,21.308 45.841,21.65 45.537,21.844 L23.537,35.844 C23.373,35.948 23.187,36 23,36 Z"fill=#DD92AB></path><path d="M38,37 L8,37 L8,1 C8,0.448 8.448,0 9,0 L37,0 C37.552,0 38,0.448 38,1 L38,37 Z"fill=#FFF></path><path d="M45,46 C44.916,46 44.831,45.989 44.748,45.968 L21.748,39.968 L22,33 L46,21 L46,45 C46,45.31 45.856,45.602 45.611,45.792 C45.435,45.928 45.219,46 45,46 Z"fill=#FFA7C4></path><path d="M45,46 L1,46 C0.447,46 0,45.552 0,45 L0,21 L45.479,44.122 C45.88,44.341 46.083,44.804 45.969,45.247 C45.856,45.69 45.457,46 45,46 Z"fill=#FFC3D7></path><path d="M19 20.414L14.293 15.707C13.902 15.316 13.902 14.684 14.293 14.293L19 9.586 20.414 11 16.414 15 20.414 19 19 20.414zM27 20.414L25.586 19 29.586 15 25.586 11 27 9.586 31.707 14.293C32.098 14.684 32.098 15.316 31.707 15.707L27 20.414z"fill=#FFA7C4></path></g></svg>';
+
+		case 'checker-tick':
+			return '<svg id="check" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" xml:space="preserve"><circle id="circle" cx="50" cy="50" r="46" fill="transparent" /><polyline id="tick" points="25,55 45,70 75,33" fill="transparent" /></svg>';
+
 		default:
 			return '';
 	}
@@ -237,3 +244,36 @@ function thewpvoyage_editor_styles() {
 	add_editor_style( 'editor-style.css' );
 }
 add_action( 'after_setup_theme', 'thewpvoyage_editor_styles' );
+
+function register_new_subscriber() {
+	$action = filter_input( INPUT_POST, 'action', FILTER_SANITIZE_STRING );
+	$name = filter_input( INPUT_POST, 'name', FILTER_SANITIZE_STRING );
+	$email = filter_input( INPUT_POST, 'email', FILTER_VALIDATE_EMAIL );
+
+	if ( 'twv_register_new_subscriber' !== $action ) {
+		return;
+	}
+
+	header( 'Content-Type: application/json; charset=utf-8' );
+
+	$user_list = get_option( 'subscription_lits', array() );
+
+	if ( isset( $user_list[ $email ] ) ) {
+		wp_send_json_error(
+			array(
+				'message' => esc_html__( 'You are already subscribed :)' ),
+			)
+		);
+	}
+
+	$user_list[ $email ] = $name;
+
+	update_option( 'subscription_lits', $user_list );
+
+	wp_send_json_success(
+		array(
+			'message' => esc_html__( 'Subscription successful!' ),
+		)
+	);
+}
+add_action( 'init', 'register_new_subscriber' );

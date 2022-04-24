@@ -58,6 +58,37 @@
 			border-color:#FFCB7B;
 			color: #805c25;
 		}
+
+		table,
+		th, td {
+			border-collapse: collapse;
+			border: 1px solid #e6c07a;
+		}
+
+		th {
+			background-color: #e6c07a30;
+			color: var(--code-text-color);
+		}
+	}
+
+	.subscription-form {
+		border-color: #d9eeff;
+
+		&__left {
+			background-color: #d9eeff;
+		}
+
+		&__right {
+			input {
+				border-color: #d9eeff;
+			}
+
+			button {
+				background-color: #d9eefe;
+				color: #1b6396;
+				cursor: pointer;
+			}
+		}
 	}
 
 	.site-footer {
