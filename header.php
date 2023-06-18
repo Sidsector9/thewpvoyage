@@ -31,10 +31,10 @@
 
 	<header id="masthead" class="site-header">
 		<div id="twpv-social-profiles">
-			<a href="https://github.com/sidsector9/">
+			<a href="https://github.com/sidsector9/" aria-label="<?php esc_attr_e( "Siddharth GitHub profile", 'wp-propellers' ) ?>">
 				<?php require_once get_template_directory() . '/assets/icons/github.svg'; ?>
 			</a>
-			<a href="https://www.linkedin.com/in/siddharth-thevaril/">
+			<a href="https://www.linkedin.com/in/siddharth-thevaril/" aria-label="<?php esc_attr_e( "Siddharth LinkedIn profile", 'wp-propellers' ) ?>">
 				<?php require_once get_template_directory() . '/assets/icons/linkedin.svg'; ?>
 			</a>
 		</div>
