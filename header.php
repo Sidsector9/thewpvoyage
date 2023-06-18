@@ -30,6 +30,14 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-propellers' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div id="twpv-social-profiles">
+			<a href="https://github.com/sidsector9/">
+				<?php require_once get_template_directory() . '/assets/icons/github.svg'; ?>
+			</a>
+			<a href="https://www.linkedin.com/in/siddharth-thevaril/">
+				<?php require_once get_template_directory() . '/assets/icons/linkedin.svg'; ?>
+			</a>
+		</div>
 		<div class="site-branding">
 			<a href="<?php echo esc_url( get_site_url() ); ?>">
 				<?php esc_html_e( 'The WordPress Voyage' ) ;?>

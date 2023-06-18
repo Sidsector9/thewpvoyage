@@ -33,6 +33,24 @@ body {
 	}
 }
 
+#twpv-social-profiles {
+	max-width: 768px;
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+	justify-content: flex-end;
+
+	a {
+		display: inline-flex;
+		margin: 0 0.5rem;
+		text-decoration: none;
+	}
+
+	svg {
+		height: 1.75rem;
+	}
+}
+
 .site-branding a {
 	text-decoration: none;
 	font-family: var(--title-font);
@@ -78,10 +96,22 @@ body {
 	text-align: center;
 	font-family: var(--code-font);
 	font-size: 1rem;
-	margin: 2.85rem 0;
+	margin: 2.85rem 0 1rem 0;
 
 	a {
 		text-decoration: none;
+	}
+}
+
+.twpv-author {
+	font-family: var(--code-font);
+	text-align: center;
+	font-size: 0.75rem;
+	color: #757575;
+
+	span {
+		font-size: 1rem;
+		color: #000;
 	}
 }
 
@@ -218,15 +248,22 @@ body {
 
 .subscription-form {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	border: 1px solid;
-	margin: 0 -6rem;
 	margin-bottom: 3rem;
 	border-radius: 12px;
 	font-family: var(--title-font);
 
+	@include desktop {
+		flex-flow: row nowrap;
+		margin-left: -6rem;
+		margin-right: -6rem;
+	}
+
 	&__left,
 	&__right {
+		padding: 2rem 1.5rem;
+
 		@include desktop {
 			padding: 2rem 3.5rem;
 			flex-grow: 1;
@@ -236,7 +273,11 @@ body {
 
 	&__right {
 		position: relative;
-		padding: 0;
+		width: 100%;
+
+		@include desktop {
+			padding: 0;
+		}
 
 		input {
 			display: block;
@@ -370,6 +411,11 @@ body {
 
 	& > div {
 		width: 100%;
+		padding: 0 0.75rem;
+
+		@include desktop {
+			padding: 0;
+		}
 
 		&:nth-child(1) {
 			margin-bottom: 2rem;
@@ -494,15 +540,16 @@ body {
 	margin-top: 5rem;
 	padding: 2rem 0;
 	text-align: center;
-	font-family: var(--andika-font);
+	font-family: var(--title-font);
 	text-transform: uppercase;
 	font-size: 0.75rem;
 	letter-spacing: 2px;
 	word-spacing: 4px;
 
 	a {
-		font-family: var(--body-font);
+		font-family: var(--title-font);
 		font-weight: bolder;
 		text-decoration: none;
+		font-size: 1rem;
 	}
 }

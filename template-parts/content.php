@@ -23,6 +23,9 @@
 			<div class="entry-meta">
 				<?php wp_propellers_posted_on(); ?>
 			</div><!-- .entry-meta -->
+			<div class="twpv-author">
+				by <span><?php the_author(); ?></span>
+			</div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
