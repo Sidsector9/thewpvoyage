@@ -277,3 +277,10 @@ function register_new_subscriber() {
 	);
 }
 add_action( 'init', 'register_new_subscriber' );
+
+function clear_front_page_cache() {
+	if ( isset( $_GET['twpv_action'] ) ) {
+		delete_transient( 'thewpvoyage_list_items' );
+	}
+}
+add_action( 'init', 'clear_front_page_cache' );
