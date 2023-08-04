@@ -21,6 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -48,11 +49,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+
 /* Normalize
 --------------------------------------------- */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -75,8 +79,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
 	list-style: none;
 }
 
@@ -114,9 +118,11 @@ select {
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
+
 	html:focus-within {
 		scroll-behavior: auto;
 	}
+
 	*,
 	*::before,
 	*::after {
@@ -129,6 +135,7 @@ select {
 
 /* Box sizing
 --------------------------------------------- */
+
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -144,6 +151,7 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
+
 /* Typography
 --------------------------------------------- */
 body,
@@ -290,7 +298,9 @@ a:visited {
 	color: #800080;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
 	color: #191970;
 }
 
@@ -298,7 +308,8 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
 	outline: 0;
 }
 
@@ -324,7 +335,8 @@ input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 }
 
-button:active, button:focus,
+button:active,
+button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -386,9 +398,11 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -448,9 +462,11 @@ textarea {
 }
 
 @media screen and (min-width: 37.5em) {
+
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: flex;
 	}
@@ -592,8 +608,10 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+
 /* Accessibility
 --------------------------------------------- */
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -636,16 +654,20 @@ textarea {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
+
 	/*rtl:ignore*/
 	float: left;
+
 	/*rtl:ignore*/
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 .alignright {
+
 	/*rtl:ignore*/
 	float: right;
+
 	/*rtl:ignore*/
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -667,13 +689,14 @@ textarea {
 }
 
 body {
-	font-family: 'Georgia', serif;
+	font-family: "Georgia", serif;
 	font-display: swap;
 	font-size: 1.1739rem;
 	line-height: 1.995rem;
 }
 
 @media screen and (min-width: 1024px) {
+
 	body {
 		font-size: 1.35rem;
 		line-height: 2.295rem;
@@ -731,6 +754,7 @@ body .live-brackground .color-4 {
 }
 
 @media screen and (min-width: 1024px) {
+
 	body.single .entry-title {
 		text-align: center;
 	}
@@ -789,6 +813,7 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 769px), print {
+
 	.site-main {
 		max-width: 768px;
 		margin: 0 auto;
@@ -801,6 +826,7 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.alignwide {
 		margin-left: -6rem;
 		margin-right: -6rem;
@@ -808,8 +834,9 @@ body article .entry-content ul {
 }
 
 .body--light {
-	color: #484A47;
+	color: #484a47;
 	background-color: #fff;
+
 	/**
 	 * Front page.
 	 */
@@ -821,9 +848,11 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.body--light .site-branding {
 		font-size: 2.75rem;
 	}
+
 	.body--light .site-branding svg {
 		max-width: 35px;
 		position: relative;
@@ -843,14 +872,17 @@ body article .entry-content ul {
 }
 
 .body--light .site-main .entry-title {
-	color: #FB4570;
+	color: #fb4570;
 }
 
 .body--light .site-main .entry-meta a {
 	color: #e08a1f;
 }
 
-.body--light .site-main .entry-meta a:hover, .body--light .site-main .entry-meta a:visited, .body--light .site-main .entry-meta a:active, .body--light .site-main .entry-meta a:focus {
+.body--light .site-main .entry-meta a:hover,
+.body--light .site-main .entry-meta a:visited,
+.body--light .site-main .entry-meta a:active,
+.body--light .site-main .entry-meta a:focus {
 	color: #e08a1f;
 }
 
@@ -860,8 +892,9 @@ body article .entry-content ul {
 	margin-bottom: 8rem;
 }
 
-.body--light .entry-content:before, .body--light .entry-content:after {
-	content: '\2026';
+.body--light .entry-content::before,
+.body--light .entry-content::after {
+	content: "\2026";
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -869,11 +902,11 @@ body article .entry-content ul {
 	line-height: 0;
 }
 
-.body--light .entry-content:before {
+.body--light .entry-content::before {
 	top: -4.5rem;
 }
 
-.body--light .entry-content:after {
+.body--light .entry-content::after {
 	bottom: -4rem;
 }
 
@@ -891,19 +924,20 @@ body article .entry-content ul {
 	font-family: "Fira Code", monospace;
 }
 
-.body--light .entry-content > p > code:before, .body--light .entry-content > p > code:after {
-	color: #FB4570;
+.body--light .entry-content > p > code::before,
+.body--light .entry-content > p > code::after {
+	color: #fb4570;
 	width: 15px;
 	display: inline-block;
 }
 
-.body--light .entry-content > p > code:before {
-	content: '{ ';
+.body--light .entry-content > p > code::before {
+	content: "{ ";
 	text-align: right;
 }
 
-.body--light .entry-content > p > code:after {
-	content: ' }';
+.body--light .entry-content > p > code::after {
+	content: " }";
 }
 
 .body--light .wp-block-code code {
@@ -913,6 +947,7 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.body--light .wp-block-code code {
 		border-radius: 8px;
 	}
@@ -933,8 +968,8 @@ body article .entry-content ul {
 }
 
 .body--light .entry-footer a {
-	color: #484A47;
-	font-family: 'Andika New Basic', sans-serif;
+	color: #484a47;
+	font-family: "Andika New Basic", sans-serif;
 	text-decoration: none;
 }
 
@@ -956,7 +991,7 @@ body article .entry-content ul {
 	width: 100%;
 	max-width: 32px;
 	height: auto;
-	fill: #FB4570;
+	fill: #fb4570;
 }
 
 .body--light .entry-footer__tax-items {
@@ -968,7 +1003,7 @@ body article .entry-content ul {
 }
 
 .body--light .nav-icon svg {
-	fill: #FB4570;
+	fill: #fb4570;
 	width: 64px;
 }
 
@@ -982,8 +1017,8 @@ body article .entry-content ul {
 
 .body--light .nav-links a {
 	display: flex;
-	font-family: 'Andika New Basic', sans-serif;
-	color: #484A47;
+	font-family: "Andika New Basic", sans-serif;
+	color: #484a47;
 	width: 100%;
 }
 
@@ -1008,7 +1043,7 @@ body article .entry-content ul {
 }
 
 .body--light .list-item {
-	font-family: 'Andika New Basic', sans-serif;
+	font-family: "Andika New Basic", sans-serif;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
@@ -1022,6 +1057,7 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.body--light .list-item {
 		flex-flow: row nowrap;
 	}
@@ -1030,7 +1066,7 @@ body article .entry-content ul {
 .body--light .list-title {
 	font-size: 1.5rem;
 	font-family: "IM Fell DW Pica", serif;
-	color: #FB4570;
+	color: #fb4570;
 	max-width: 100%;
 }
 
@@ -1040,6 +1076,7 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.body--light .list-title {
 		font-size: 2rem;
 		font-weight: 400;
@@ -1067,14 +1104,17 @@ body article .entry-content ul {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.body--light .nav-links > * {
 		width: 50%;
 		min-height: auto;
 	}
+
 	.body--light .nav-links > *:nth-child(1) {
 		padding-right: 1rem;
 		margin-bottom: auto;
 	}
+
 	.body--light .nav-links > *:nth-child(2) {
 		padding-left: 1rem;
 	}
@@ -1093,7 +1133,7 @@ body article .entry-content ul {
 .body--light.archive .archive-icon svg {
 	width: 100%;
 	height: auto;
-	fill: #FB4570;
+	fill: #fb4570;
 }
 
 .body--light.archive .archive-title {
@@ -1105,7 +1145,7 @@ body article .entry-content ul {
 	margin-top: 5rem;
 	padding: 2rem 0;
 	text-align: center;
-	font-family: 'Andika New Basic';
+	font-family: "Andika New Basic";
 	text-transform: uppercase;
 	font-size: 0.75rem;
 	letter-spacing: 2px;
@@ -1118,5 +1158,3 @@ body article .entry-content ul {
 	font-weight: bolder;
 	text-decoration: none;
 }
-
-/*# sourceMappingURL=style.css.map */
