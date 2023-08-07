@@ -616,24 +616,11 @@ textarea {
 	}
 }
 
-.buntywp--dummy {
-	@include mobile {
-		height: 112px;
-	}
-
-	@include desktop {
-		height: 105px;
-	}
-}
-
 .buntywp {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
 	background-color: #FFD9DA;
 	color: #000;
 	font-family: var(--title-font);
+	margin: 0 -1.5rem;
 
 	@include mobile {
 		font-size: 1rem;
