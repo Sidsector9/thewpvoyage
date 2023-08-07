@@ -10,7 +10,16 @@
  */
 
 ?>
-
+	<div class="buntywp">
+		<div class="buntywp__wrapper">
+			<?php
+				printf(
+					__( "Hey visitors! If you're a beginner in WordPress and WP-CLI development, then you should check out my dear friend Bhargav's Youtube channel! <a href='%s'>@BuntyWP</a>" ),
+					esc_url( 'https://www.youtube.com/@BuntyWP/videos' )
+				);
+			?>
+		</div>
+	</div>
 	<footer id="colophon" class="site-footer">
 		<?php printf( __( 'Powered by <a href="https://wordpress.org/">%s</a>' ), 'WordPress' ); ?>
 	</footer><!-- #colophon -->

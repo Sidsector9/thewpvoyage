@@ -616,6 +616,61 @@ textarea {
 	}
 }
 
+.buntywp--dummy {
+	@include mobile {
+		height: 112px;
+	}
+
+	@include desktop {
+		height: 105px;
+	}
+}
+
+.buntywp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #FFD9DA;
+	color: #000;
+	font-family: var(--title-font);
+
+	@include mobile {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	
+	@include desktop {
+		font-size: 1.15rem;
+		line-height: 2rem;
+	}
+	
+	&__wrapper {
+		@include mobile {
+			padding: 0.5rem 1.5rem;
+		}
+
+		max-width: 768px;
+		padding: 1rem 0;
+		margin: 0 auto;
+	}
+
+	a {
+		color: var(--title-color);
+		text-decoration: none;
+	}
+
+	img {
+		display: inline;
+		max-width: 48px;
+		height: auto;
+		border-radius: 50%;
+		margin-bottom: -16px;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+}
+
 // site footer
 .site-footer {
 	margin-top: 5rem;
